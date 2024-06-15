@@ -99,7 +99,7 @@ export const put: RequestHandler = async req => {
 	const slug = createSlug(title)
 
 	// if the visibility is different, check if they can delete entries
-	if (body.visibility !== entry.visibility && !(await isAdminPromise))
+	if (body.visibility !== entry.visibility)
 		return {
 			status: 403,
 			body: { error: 'You do not have permission to change the visibility of this entry' },
