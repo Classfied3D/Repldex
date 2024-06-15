@@ -89,13 +89,6 @@ export const put: RequestHandler = async req => {
 			body: { error: 'You do not have permission to edit this entry' },
 		}
 
-	// if the title is different, check if they can create entries
-	if (title !== entry.title && !canCreateEntriesPromise || true)
-		return {
-			status: 403,
-			body: { error: 'You do not have permission to rename this entry' },
-		}
-
 	const slug = createSlug(title)
 
 	// if the visibility is different, check if they can delete entries
