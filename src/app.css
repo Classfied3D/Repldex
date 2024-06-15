@@ -1,0 +1,60 @@
+:root {
+	/* Dark theme */
+	--background-color: #1f1f1f;
+	--alternate-background-color: #2f2f2f;
+	--text-color: #d9d9d9;
+	--alternate-text-color: #aaaaaa;
+
+	--link-color: #10abe8;
+
+	--bright-text-color: #fff;
+	--font: 'Atkinson Hyperlegible', sans-serif;
+}
+
+/* this file should only contain styles for html elements, not any specific classes or ids */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: var(--font);
+	margin: 0;
+}
+
+a {
+	color: var(--link-color);
+}
+
+input {
+	border: none;
+	border-radius: 0.5em;
+	background-color: var(--alternate-background-color);
+	color: var(--text-color);
+	padding: 0.5em;
+}
+
+button {
+	background: var(--alternate-background-color);
+	border: none;
+	color: var(--text-color);
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	cursor: pointer;
+}
+
+select {
+	border: none;
+	border-radius: 0.5em;
+	background-color: var(--alternate-background-color);
+	color: var(--text-color);
+	padding: 0.5em;
+	font-family: inherit;
+	position: relative;
+	margin: 0;
+}
