@@ -90,7 +90,7 @@ export const put: RequestHandler = async req => {
 		}
 
 	// if the title is different, check if they can create entries
-	if (title !== entry.title && !canCreateEntriesPromise)
+	if (title !== entry.title && !canCreateEntriesPromise || true)
 		return {
 			status: 403,
 			body: { error: 'You do not have permission to rename this entry' },
