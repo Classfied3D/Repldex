@@ -13,8 +13,7 @@ if (!DISCORD_CLIENT_SECRET) throw new Error('DISCORD_CLIENT_SECRET environment v
 
 export const get: RequestHandler = async req => {
 	const discordOauthCode = req.url.searchParams.get('code')
-	//const redirectUri = new URL('/login', `https://${req.url.host}`).toString()
-	const redirectUri = "https://f27b6e72-f520-4ecd-b4d8-aa99057ca8d0-00-1qtv3kw5xvr1m.spock.replit.dev/login"
+	const redirectUri = new URL('/login', `https://repldex-revived.vercel.app`).toString()
 
 	// if there's no OAuth code, redirect to Discord's authorization page
 
