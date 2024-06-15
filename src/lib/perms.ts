@@ -1,6 +1,6 @@
 import type { Entry } from './database/entries'
 import type { User } from './database/users'
-//??
+//??m
 /**
  * Whether the user can create (or rename) entries. Renaming is included here
  * since it often has the same effect as creating a new entry.
