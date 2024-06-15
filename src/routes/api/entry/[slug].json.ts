@@ -91,13 +91,6 @@ export const put: RequestHandler = async req => {
 
 	const slug = createSlug(title)
 
-	// if the visibility is different, check if they can delete entries
-	if (body.visibility !== entry.visibility)
-		return {
-			status: 403,
-			body: { error: 'You do not have permission to change the visibility of this entry' },
-		}
-
 	// everything is right, do the edit and add to the history
 	const editedEntry = await editEntry(entry.id, {
 		content,
